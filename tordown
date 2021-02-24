@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Stopping"
+sudo systemctl stop tor.service tor@default.service privoxy.service
+source $HOME/.bashrc
+rm $HOME/.bashrcproxy
+sleep 3
+sudo systemctl -n 3 status tor.service tor@default.service privoxy
+

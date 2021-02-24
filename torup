@@ -1,0 +1,16 @@
+#!/bin/bash
+reset
+echo "Starting tor and privoxy..."
+sudo systemctl start tor
+sudo systemctl start privoxy
+echo "Pending..."
+sleep 5
+cp .bashrc .bashrcproxy
+cat $HOME/.local/share/tbproxy/tbproxyup >> $HOME/.bashrcproxy
+source $HOME/.bashrcproxy
+sudo systemctl status --no-pager -n 5 privoxy.service tor.service tor@default.service
+echo "Public ip:"
+curl ifconfig.me
+echo
+echo "Torify ip:"
+torify curl ifconfig.me

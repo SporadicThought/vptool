@@ -1,0 +1,7 @@
+#!/bin/bash
+sudo systemctl status --no-pager --full privoxy.service tor.service tor@default.service
+echo 'Public ip:'
+curl ifconfig.me
+echo
+echo 'Torify ip:'
+torify curl ifconfig.me

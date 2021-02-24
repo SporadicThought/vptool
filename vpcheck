@@ -1,0 +1,9 @@
+#!/bin/bash
+sudo journalctl -e -n 5 -t openvpn -b 0 --no-hostname --no-pager
+echo "pid  cli_command"
+pgrep -a -l openvpn
+echo "count:"
+pgrep -c openvpn
+echo 'Public ip:'
+curl ifconfig.me
+echo
