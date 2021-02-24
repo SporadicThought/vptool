@@ -1,1 +1,3 @@
-This directory should contain config files from the vpn host they will be imported from here, edited as necessary, and placed in vptool/config/imported
+Place VPN provider .ovpn files here, these are the original copies. 
+Files will be processed and moved to vptool/config/imported/ when ready for use.
+
