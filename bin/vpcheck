@@ -1,4 +1,5 @@
 #!/bin/bash
+
 sudo journalctl -e -n 5 -t openvpn -b 0 --no-hostname --no-pager
 echo "pid  cli_command"
 pgrep -a -l openvpn
