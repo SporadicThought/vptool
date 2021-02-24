@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo |cat $HOME/.chaostun/chaostun.old.txt
+sudo openvpn --config $HOME/.vptool/vptool-example.ovpn --daemon
+echo 'Public ip:'
+curl ifconfig.me
+echo
