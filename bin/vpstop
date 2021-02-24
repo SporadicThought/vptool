@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -x
 sudo pkill --signal SIGTERM openvpn
 pgrep openvpn
