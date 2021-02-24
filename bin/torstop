@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "Stopping"
 sudo systemctl stop tor.service tor@default.service privoxy.service
 source $HOME/.bashrc
