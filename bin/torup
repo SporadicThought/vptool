@@ -1,4 +1,5 @@
 #!/bin/bash
+
 reset
 echo "Starting tor and privoxy..."
 sudo systemctl start tor
